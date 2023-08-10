@@ -1,1 +1,377 @@
-<img src="h.PNG">
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+<head>
+
+
+</head>
+<body>
+	<header id="header">
+		
+<img src="https://tosamap.github.io/hh.PNG" width="80%">
+
+	</header>
+		<div class="openbtn1"><span></span><span></span><span></span></div>
+<nav id="g-nav">
+<div id="g-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
+<ul><font face="sans-serif">
+<li><a href="#">CiRX</a></li>	
+<li><a href="#"><span style="font-weight:normal; font-size:35px">資料の検索</span></a></li>	
+<li><a href="#"><span style="font-weight:normal; font-size:35px">文学作品の検索</span></a></li>	
+<li><a href="#"><span style="font-weight:normal; font-size:35px">映像の検索</span></a></li>	
+<li><a href="https://drive.google.com/drive/folders/1-dJtiGTfasUyqvrYvwaxsQAqornoVnwy">学会資料図書館<span class="material-icons-outlined" style="font-size:20pt; color:#fff;vertical-align:middle; ">open_in_new</span></a></li>	
+<li><a href="#">本サービスについて</a></li>
+<li><a href="https://acs-ed.github.io/sso/資料提供について.html">資料提供について</a></li>	
+<li><a href="https://acs-ed.github.io/sso/sitemap.html">サイトマップ</a></li>
+<hr>
+<li><a href="https://acs-ed.github.io/sso/機構について.html">共有保存機構について</a></li>	
+	<li><a href="https://acs-ed.github.io/sso/情報資料部.html">情報資料部</a></li>	
+	<li><a href="https://acs-ed.github.io/sso/物的資料部.html">物的資料部</a></li>	
+	<hr>
+	<li><a href="https://acs-ed.github.io/acs/3430141214159265358979.html">菊阿学会<span class="material-icons-outlined" style="font-size:20pt; color:#fff;vertical-align:middle; ">open_in_new</span></a></li>	
+	<li><a href="https://acs-ed.github.io/riac/">学会研究院<span class="material-icons-outlined" style="font-size:20pt; color:#fff;vertical-align:middle; ">open_in_new</span></a></li>	
+	<hr><font style="font-size:35px">
+	<li><a href="#"><span style="font-weight:normal; letter-spacing:0px; font-family: 'Barlow Condensed', sans-serif;">JP</span> <span style="font-weight:normal;">日本語</span></a></li>	
+	<li><a href="https://translate.google.com/translate?sl=ja&tl=en&u=https://acs-ed.github.io/sso/"><span style="font-weight:normal; letter-spacing:0px; font-family: 'Barlow Condensed', sans-serif;">EN</span> <span style="font-weight:normal;">英語</span></a></li>	
+	<li><a href="https://translate.google.com/translate?sl=ja&tl=zh&u=https://acs-ed.github.io/sso/"><span style="font-weight:normal; letter-spacing:0px; font-family: 'Barlow Condensed', sans-serif;">ZH</span> <span style="font-weight:normal;">中国語</span></a></li>	</font>
+</ul></font>
+</div>
+</nav>
+
+<main>
+
+
+<style>
+.material-icons.gray {
+	color: gray;
+	font-size:30px
+}
+.material-icons-round.gray {
+	color: gray;
+	font-size:40px
+	}
+</style>
+
+<body link="#50469C">
+<div id=pagetop></div>
+
+<font size="5" face="sans-serif">
+<div>
+<style type="text/css">
+body {
+   margin: 0;
+   padding: 0;
+}
+</style>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d106383.95923327394!2d133.6016896!3d33.5663981!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354e194849d37d23%3A0xb4e50bd99dbf767d!2z44Gv44KK44G-44KE5qmL!5e0!3m2!1sja!2sjp!4v1691684018783!5m2!1sja!2sjp" width="100%" height="950" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+
+
+
+
+
+
+<script>
+//スクロールすると上部に固定させるための設定を関数でまとめる
+function FixedAnime() {
+	var headerH = $('#header').outerHeight(true);
+	var scroll = $(window).scrollTop();
+	if (scroll >= headerH){//headerの高さ以上になったら
+			$('#header').addClass('fixed');//fixedというクラス名を付与
+		}else{//それ以外は
+			$('#header').removeClass('fixed');//fixedというクラス名を除去
+		}
+}
+
+//ナビゲーションをクリックした際のスムーススクロール
+$('#g-navi a').click(function () {
+	var elmHash = $(this).attr('href'); //hrefの内容を取得
+	var pos = Math.round($(elmHash).offset().top-120);	//headerの高さを引く
+	$('body,html').animate({scrollTop: pos}, 500);//取得した位置にスクロール※数値が大きいほどゆっくりスクロール
+	return false;//リンクの無効化
+});
+
+
+// 画面をスクロールをしたら動かしたい場合の記述
+$(window).scroll(function () {
+	FixedAnime();/* スクロール途中からヘッダーを出現させる関数を呼ぶ*/
+});
+
+// ページが読み込まれたらすぐに動かしたい場合の記述
+$(window).on('load', function () {
+	FixedAnime();/* スクロール途中からヘッダーを出現させる関数を呼ぶ*/
+});
+</script>
+<style>
+@charset "utf-8";
+
+/*========= 上部固定させるためのCSS ===============*/
+#header{
+	
+	width:100%;/*横幅指定*/
+	/*以下はレイアウトのためのCSS*/
+	display: flex;
+	justify-content: space-between;
+	background:#4D041D;
+	color:#fff;
+	
+	
+	
+}
+
+/*JSを使いfixedクラスが付与された際の設定*/
+#header.fixed{
+	position: fixed;/*fixedを設定して固定*/
+    z-index: 999;/*最前面へ*/
+    top:0;/*位置指定*/
+    left:0;/*位置指定*/
+}
+@charset "utf-8";
+
+/*========= ナビゲーションのためのCSS ===============*/
+
+#g-nav{
+    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+    position:fixed;
+    z-index: 999;
+    /*ナビのスタート位置と形状*/
+	top:0;
+    right: -120%;
+	width:70%;
+    height: 100vh;/*ナビの高さ*/
+	background:#333;
+    /*動き*/
+	transition: all 0.6s;
+}
+
+/*アクティブクラスがついたら位置を0に*/
+#g-nav.panelactive{
+    right: 0;
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list{
+    /*ナビの数が増えた場合縦スクロール*/
+    position: fixed;
+    z-index: 999; 
+    width: 100%;
+    height: 100vh;/*表示する高さ*/
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+    /*ナビゲーション天地中央揃え*/
+    position: absolute;
+    z-index: 1000;
+    top:40%;
+    left:40%;
+    transform: translate(-50%,-50%);
+    font-size:40px;
+}
+/*リストのレイアウト設定*/
+
+#g-nav li{
+	list-style: none;
+    
+}
+
+#g-nav li a{
+	color: #fff;
+	text-decoration: none;
+	padding:10px;
+	display: block;
+	
+	letter-spacing: 0.1em;
+	font-weight: bold;
+}
+/*========= ボタンのためのCSS ===============*/
+.openbtn1{
+   
+	position:fixed;
+    z-index: 9999;/*ボタンを最前面に*/
+	top:10px;
+	right: 10px;
+	cursor: pointer;
+    width: 50px;
+    height:50px;
+}
+	
+/*×に変化*/	
+.openbtn1 span{
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: -30px;
+    height: 6px;
+    border-radius: 2px;
+	background-color: #fff;
+  	width: 120%;
+  }
+  .openbtn1 span:nth-of-type(1) {
+	top:28px;	
+}
+
+.openbtn1 span:nth-of-type(2) {
+	top:47px;
+}
+
+.openbtn1 span:nth-of-type(3) {
+	top:66px;
+}
+
+.openbtn1.active span:nth-of-type(1) {
+    top: 33px;
+    left: -15px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 100%;
+}
+
+.openbtn1.active span:nth-of-type(2) {
+	opacity: 0;
+}
+.openbtn1.active span:nth-of-type(3){
+    top: 45px;
+    left: -15px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 100%;
+}
+
+
+</style>
+<script>
+$(".openbtn1").click(function () {//ボタンがクリックされたら
+	$(this).toggleClass('active');//ボタン自身に activeクラスを付与し
+    $("#g-nav").toggleClass('panelactive');//ナビゲーションにpanelactiveクラスを付与
+});
+
+$("#g-nav a").click(function () {//ナビゲーションのリンクがクリックされたら
+    $(".openbtn1").removeClass('active');//ボタンの activeクラスを除去し
+    $("#g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスも除去
+});
+</script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/8-1-3/js/8-1-3.js"></script>
+</body>
+</html>
+
+<style>
+@charset "utf-8";
+
+/*========= ページトップのためのCSS ===============*/
+/*リンクの形状*/
+#page-top a{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  background:#fff;
+  border-radius: 60px;
+  width: 120px;
+  height: 120px;
+  color: #fff;
+  box-shadow: 1px 1px 3px 1px rgba(180, 180, 180, 0.5);
+  text-align: center;
+  text-transform: uppercase; 
+  text-decoration: none;
+  font-size:0.6rem;
+  transition:all 0.3s;
+}
+
+#page-top a:hover{
+  background: #fff;
+}
+
+/*リンクを右下に固定*/
+#page-top {
+  position: fixed;
+  right: 30px;
+  z-index: 2;
+    /*はじめは非表示*/
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+/*　上に上がる動き　*/
+
+#page-top.UpMove{
+  animation: UpAnime 0.5s forwards;
+}
+@keyframes UpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(200px);
+  }
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+/*　下に下がる動き　*/
+
+#page-top.DownMove{
+  animation: DownAnime 0.5s forwards;
+}
+@keyframes DownAnime{
+  from {
+    opacity: 1;
+  transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+  transform: translateY(200px);
+  }
+}
+</style>
+<script>
+//スクロールした際の動きを関数でまとめる
+function PageTopAnime() {
+
+    var scroll = $(window).scrollTop(); //スクロール値を取得
+    if (scroll >= 1000){//200pxスクロールしたら
+      $('#page-top').removeClass('DownMove');   // DownMoveというクラス名を除去して
+      $('#page-top').addClass('UpMove');      // UpMoveというクラス名を追加して出現
+    }else{//それ以外は
+      if($('#page-top').hasClass('UpMove')){//UpMoveというクラス名が既に付与されていたら
+        $('#page-top').removeClass('UpMove'); //  UpMoveというクラス名を除去し
+        $('#page-top').addClass('DownMove');  // DownMoveというクラス名を追加して非表示
+      }
+    }
+    
+    var wH = window.innerHeight; //画面の高さを取得
+    var footerPos =  $('#footer').offset().top; //footerの位置を取得
+    if(scroll+wH >= (footerPos+10)) {
+      var pos = (scroll+wH) - footerPos+10 //スクロールの値＋画面の高さからfooterの位置＋10pxを引いた場所を取得し
+      $('#page-top').css('bottom',pos); //#page-topに上記の値をCSSのbottomに直接指定してフッター手前で止まるようにする
+    }else{//それ以外は
+      if($('#page-top').hasClass('UpMove')){//UpMoveというクラス名がついていたら
+        $('#page-top').css('bottom','10px');// 下から10pxの位置にページリンクを指定
+      }
+    }
+}
+
+// 画面をスクロールをしたら動かしたい場合の記述
+$(window).scroll(function () {
+  PageTopAnime();/* スクロールした際の動きの関数を呼ぶ*/
+});
+
+// ページが読み込まれたらすぐに動かしたい場合の記述
+$(window).on('load', function () {
+  PageTopAnime();/* スクロールした際の動きの関数を呼ぶ*/
+});
+
+// #page-topをクリックした際の設定
+$('#page-top').click(function () {
+    $('body,html').animate({
+        scrollTop: 0//ページトップまでスクロール
+    }, 500);//ページトップスクロールの速さ。数字が大きいほど遅くなる
+    return false;//リンク自体の無効化
+});
+</script>
